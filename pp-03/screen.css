@@ -54,11 +54,7 @@ height: 100vw;
     flex-direction: row-reverse;
   }
   
-  #one{
-    width: 50vw;
-    height: 50vw;
-  }
-  
+  #one,
   #two{
     width: 50vw;
     height: 50vw;
