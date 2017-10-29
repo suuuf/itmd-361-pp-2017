@@ -5,8 +5,8 @@
 var x = 5;
 
 function double(num) {
-  x = num * 2;
-  return x;
+  var temp = num * 2;
+  return temp;
 }
 
 double(6);
