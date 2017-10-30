@@ -45,7 +45,8 @@ console.log('The value of x is:', x, 'It should be 5.');
   //  4. Explain why this function does not modify the global
   //  variable x declared on line 5 above. Write your explanation
   //  as JavaScript comments.
-
+  //  The addTwo function is using the local instance of 'x' defined in its parameter and not the global 'x'.
+  
   function addTwo(x) {
     x = x + 2;
     return x;
