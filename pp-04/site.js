@@ -18,32 +18,38 @@ console.log('The value of x is:', x, 'It should be 5.');
 //  function can be accessed via the `window` global object,
 //  like `window.x`):
 
-var anon = function double(num) {
-  return (num*2);
-}
-console.log('Anonymous double function with num:6 result:' + anon(6));
-
-//  3. Correct this function so that there is no i variable in
-//  the global scope:
-
-function arrayEach(array, func) {
-  for (var i = 0; i < array.length; i++) {
-    func(array[i]);
+(function () {
+  var x = 5;
+  function double(num) {
+    var x = num * 2;
+    return x;
   }
-}
+  double(6);
+})();
 
-arrayEach(['red','green','blue'], console.log);
+  console.log('The value of x is:', x, 'It should be 5.');
 
-console.log(i) // should be 'undefined', not 3
+  //  3. Correct this function so that there is no i variable in
+  //  the global scope:
 
-//  4. Explain why this function does not modify the global
-//  variable x declared on line 5 above. Write your explanation
-//  as JavaScript comments.
+  function arrayEach(array, func) {
+    for (var i = 0; i < array.length; i++) {
+      func(array[i]);
+    }
+  }
 
-function addTwo(x) {
-  x = x + 2;
-  return x;
-}
+  arrayEach(['red', 'green', 'blue'], console.log);
 
-console.log(addTwo(4)); // 6
-console.log(x); // should be 5 if you corrected the double() function above
+  console.log(i) // should be 'undefined', not 3
+
+  //  4. Explain why this function does not modify the global
+  //  variable x declared on line 5 above. Write your explanation
+  //  as JavaScript comments.
+
+  function addTwo(x) {
+    x = x + 2;
+    return x;
+  }
+
+  console.log(addTwo(4)); // 6
+  console.log(x); // should be 5 if you corrected the double() function above
