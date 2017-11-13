@@ -18,6 +18,10 @@ body {
   padding: 10%;
 }
 
+.hide {
+  display: none;
+}
+
 /* ===== LAYOUT STYLES ===== */
 
 
