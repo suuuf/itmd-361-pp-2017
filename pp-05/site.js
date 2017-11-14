@@ -6,7 +6,11 @@ function ringDoorbell() {
 $.noConflict();
 
 (function($) {
+  
   $('html').removeClass('nojs').addClass('js');
-  $('#doorbell').addClass('hide');
+  $('#doorbell').remove();
+  var input = "<input type='button' id='doorbell' value='Play/Pause'>";
+  $("body").append(input);
+  
 })(jQuery);
 
