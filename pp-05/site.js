@@ -17,5 +17,11 @@ $.noConflict();
     ringDoorbell();
   });
   
+$( "body" ).keypress(function(e) {
+    if(e.which==100){
+      ringDoorbell();
+    }
+});
+  
 })(jQuery);
 
